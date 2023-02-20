@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>+ 𝓐𝓡𝓔𝓤𝓜 𝓒𝓐𝓡𝓔 +</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <style>
+    #box1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <!-- 아름케어 토끼 로고 -->
+    <img src="C:\Users\User\final_project\DB_QR-CODE\views\logo.png">
+  </p>
+  <br />
+  <!-- 아름케어 슬로건 -->
+  <div id="box1"><b>새로운 연결이, 건강에 스며들게</b></div>
+  <div id="box1">
+    <h5>+ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐀𝐑𝐄𝐔𝐌𝐂𝐀𝐑𝐄 +</h5>
+  </div>
+  <hr />
+
+  <!-- 입력창 만들기 qr코드 처방전 조회용 id 넣는 부분 -->
+  <div class="nav justify-content-center">
+    <div class="card border-primary mb-3"
+      style="max-width: 50rem; margin-top: 30px ; border-color: #E1EEF6 ; border-radius: 30px ; border-style: dashed ; border-width: 3px ;  border-color: #ABDB3B ; background-color: #E1EEF6">
+      <div class="card-header">
+        ※ QR처방전을 조회할 환자의 성함과 전화번호를 입력하세요
+      </div>
+      <!-- 방식은 post/ 서버에서 조회할때의 값을 바꾸려면 req.body.findId 부분을 req.body. 로 지정해주면댐 -->
+      <!-- 바꾸는 경우 index.ejs에서는 name="findId" 부분의 findId부분을 creq.body.findId 의 findId 와 같게 지정하기 -->
+      <div class="card-body text-primary">
+        <form action="/" method="POST">
+          <input type="text" name="findId" placeholder="처방전 ID값을 입력하세요" class="form-control" required /><br />
+
+          <div class="text-center">
+            <input type="submit" value="처방전 조회하기" class="btn" />
+          </div>
+        </form>
+      </div>
+</body>
+<script src="/server.js"></script>
+
+</html>
